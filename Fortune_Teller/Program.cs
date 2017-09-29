@@ -15,13 +15,7 @@ namespace Fortune_Teller
             //Correct GitHub link is properly submitted
             //GitHub repository created from correct folder and contains solution file
 
-            //Ask the user for the user’s first name
-            //Ask the user for the user’s last name
-            //Ask the user for the user’s age
-            //Ask the user for the user’s birth month(as an 'int')
-            //Ask the user for the user’s favorite ROYGBIV color
-            //If the user does not know what ROYGBIV is, ask them to enter “Help” to get a list of the ROYGBIV colors
-            //Ask the user for the number of siblings the user has
+            //Declaring variables and asking for user input:
 
             Console.WriteLine("Welcome to Madame Sybil's Fortune Telling Tent. I knew you were coming.");
             Console.WriteLine("\nWhat is your first name? Type it, and then click \"Enter.\"");
@@ -121,18 +115,83 @@ namespace Fortune_Teller
                 Console.WriteLine("\nWow! What size wagon did your family need to get around?");
             }
 
+            //Conditionals:
+
+            //If the user’s age is an odd number, then they will retire in ____ years, or ___ years if their age is an even number.
+            string retireAge;
+            if (userAge % 2 == 0)
+            {
+                retireAge = "even";
+            }
+            else
+            {
+                retireAge = "odd";
+            }
+            //If the user’s number of siblings is 0, then they will have a vacation home in ____(location),
+            string vacaHome;
+            if(sibCount == 0)
+            {
+                vacaHome = "New York City";
+            } 
+            //or 1 then they will have a vacation home in ____(location),
+            else if(sibCount == 1)
+            {
+                vacaHome = "Chicago";
+            }
+            //or 2 then they will have a vacation home in ____(location), 
+            else if(sibCount == 2)
+            {
+                vacaHome = "Omaha";
+            }
+            //or 3 then they will have a vacation home in ____(location), 
+            else if(sibCount == 3)
+            {
+                vacaHome = "Key West";
+            }
+            //or more than 3 then they will have a vacation home in ____(location).
+            else if(sibCount > 3)
+            {
+                vacaHome = "Sedona";
+            }
+            //If the user enters anything other than a number greater than or equal to 0, they should get a bad vacation home!
+            else
+            {
+                vacaHome = "Siberia";
+            }
+
+            //Depending on which ROYGBIV color is the user’s favorite, they will have a specific mode of transportation(i.e.car, boat, plane, etc.)
+            string modeTransportation;
+            switch faveColor
+                {
+                case red:
+                    modeTransportation = "sportscar";
+                    break;
+                case orange:
+                    modeTransportation = "scooter";S
+
+            }
+                
+
+            //If the user’s birth month is 1 - 4, they will have $____ in the bank; 
+            //if the user's birth month is 5-8, they will have $____ in the bank; 
+            //and if it is 9-12, then they will have $____ in the bank. 
+            //If the user enters something other than 1-12 as their birth month, they will have $0.00 in the bank.
+
+            //The user’s fortune should be written as such:
+            //[First Name] [Last Name] will retire in [# of Years] with [Amount of Money] in the bank, a vacation home in [Location] and a [Mode of Transportation].
+            //Program should be able to handle whether or not a user inputs capital or lowercase letters.
+
+
+            Console.WriteLine("\nI look in the crystal ball, and Spirit is telling me this:");
+            Console.WriteLine(firstName + " " + lastName " will retire in " + )
 
 
 
 
-                    
 
 
 
 
-
-
-            
 
 
         }
