@@ -72,6 +72,8 @@ namespace Fortune_Teller
             {
                 case "help":
                     Console.WriteLine("ROYGBIV is an acronym for the colors red, orange, yellow, green, blue, indigo, and violet.Think RAINBOW!\nI'm sorry that you are unacquainted with ROYGBIV.");
+                    Console.WriteLine("So, what is your favorite ROYGBIV color?");
+                    Console.ReadLine().ToLower();
                     break;
                 case "red":
                     Console.WriteLine("Red, like my ruby birthstone!");
@@ -185,6 +187,9 @@ namespace Fortune_Teller
                     break;
                 case "violet":
                     modeTransportation = "Prius";
+                    break;
+                case "help":
+                    modeTransportation = "unicycle";
                     break;
                 default:
                     modeTransportation = "Ford Pinto";
