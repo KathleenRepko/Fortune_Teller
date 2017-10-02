@@ -12,25 +12,23 @@ namespace Fortune_Teller
 
         static void Main(string[] args)
         {
-            //Correct GitHub link is properly submitted
-            //GitHub repository created from correct folder and contains solution file
-            //Program should be able to handle whether or not a user inputs capital or lowercase letters.
-            
+            Console.WriteLine("Welcome to Madame Zeroni's Fortune Telling Tent. I knew you were coming.");
+           
             //Declaring variables and asking for user input:
-            Console.WriteLine("Welcome to Madame Sybil's Fortune Telling Tent. I knew you were coming.");
-            Console.WriteLine("\nWhat is your first name? Type it, and then click \"Enter.\"");
-            string firstName = Console.ReadLine();
-            Console.WriteLine("\nLovely! Thank you!");
 
+            Console.WriteLine("\nMy friend, what is your first name? Type it, and then click \"Enter.\"");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Lovely! Thank you!");
+           
             Console.WriteLine("\nWhat is your last name? Type it, and then click \"Enter.\"");
             string lastName = Console.ReadLine();
-            Console.WriteLine("\nI knew a family named " + lastName + " from Poughkeepsie. Uncanny!");
+            Console.WriteLine("I knew a family named " + lastName + " from Poughkeepsie. Uncanny!");
 
             Console.WriteLine("\nHow many years have you been alive? Type a number, and then click \"Enter.\"");
             int userAge = int.Parse(Console.ReadLine());
             if (userAge < 18)
             {
-                Console.WriteLine("\nYou're just a baby!");
+                Console.WriteLine("You're just a baby!");
             }
             else if (userAge >= 18 && userAge <=40)
             {
@@ -38,68 +36,66 @@ namespace Fortune_Teller
             }
             else if (userAge > 40 && userAge < 65)
             {
-                Console.WriteLine("\nWith age comes wisdom!");
+                Console.WriteLine("With age comes wisdom!");
             }
             else
             {
-                Console.WriteLine("\nI respect my elders!");
+                Console.WriteLine("I respect my elders!");
             }
             Console.WriteLine("\nIn what month were you born? Please type the number of the month, and then click \"Enter.\"\nIf you enter a word, I may cry and close up shop for the day.");
             int userMonth = int.Parse(Console.ReadLine());
             if (userMonth == 1 || userMonth == 2 || userMonth == 12)
             {
-                Console.WriteLine("\nBrrr! You were born in a cold month!");
+                Console.WriteLine("Brrr! You were born in a cold month!");
             }
             else if (userMonth == 3 || userMonth == 4 || userMonth == 5)
             {
-                Console.WriteLine("\nAhhhh, springtime!");
+                Console.WriteLine("Ahhhh, springtime!");
             }
             else if (userMonth == 6 || userMonth == 7 || userMonth == 8)
             {
-                Console.WriteLine("\nSummer baby! Me too!");
+                Console.WriteLine("Summer baby! Me too!");
             }
             else if (userMonth == 9 || userMonth == 10 || userMonth == 11)
             {
-                Console.WriteLine("\nAutumn is such a lovely time of year.");
+                Console.WriteLine("Autumn is such a lovely time of year.");
             }
             else 
             {
-                Console.WriteLine("\nHow are the months numbered where you live? That month doesn't exist where I come from. Moving right along...");
+                Console.WriteLine("How are the months numbered where you live? That month doesn't exist where I come from. Moving right along...");
             }
 
-         
             Console.WriteLine("\nWhat is your favorite ROYGBIV color?\nIf you do not know what ROYGBIV is, please type \"Help\" and click \"Enter.\"");
             string faveColor = Console.ReadLine().ToLower();
 
             switch (faveColor)
             {
                 case "help":
-                    Console.WriteLine("\nROYGBIV is an acronym for the colors red, orange, yellow, green, blue, indigo, and violet.Think RAINBOW!\nI'm sorry that you are unacquainted with ROYGBIV.");
-                    //How does the user return to the color question? Likely involves a loop.
+                    Console.WriteLine("ROYGBIV is an acronym for the colors red, orange, yellow, green, blue, indigo, and violet.Think RAINBOW!\nI'm sorry that you are unacquainted with ROYGBIV.");
                     break;
                 case "red":
-                    Console.WriteLine("\nRed, like my ruby birthstone!");
+                    Console.WriteLine("Red, like my ruby birthstone!");
                     break;
                 case "orange":
-                    Console.WriteLine("\nOrange you glad you came in today?");
+                    Console.WriteLine("Orange you glad you came in today?");
                     break;
                 case "yellow":
-                    Console.WriteLine("\nLike Yellowstone - beautiful!");
+                    Console.WriteLine("Like Yellowstone - beautiful!");
                     break;
                 case "green":
-                    Console.WriteLine("\nGreen is my favorite color as well!");
+                    Console.WriteLine("Green is my favorite color as well!");
                     break;
                 case "blue":
-                    Console.WriteLine("\nBlue, like the skies over Keuka Lake!");
+                    Console.WriteLine("Blue, like the skies over Keuka Lake!");
                     break;
                 case "indigo":
-                    Console.WriteLine("\nI'm pretty sure indigo is a made up color, but OK.");
+                    Console.WriteLine("I'm pretty sure indigo is a made-up color, but OK.");
                     break;
                 case "violet":
-                    Console.WriteLine("\nPurple - very regal!");
+                    Console.WriteLine("Violet - very regal!");
                     break;
                 default:
-                    Console.WriteLine("\nYou do not know ROYGBIV? Your future looks bleak.");
+                    Console.WriteLine("What? You do not know ROYGBIV? Your future looks bleak.");
                     break;
             }
 
@@ -108,24 +104,25 @@ namespace Fortune_Teller
             
             if(sibCount == 0)
             {
-                Console.WriteLine("\nAn only child!");
+                Console.WriteLine("An only child!");
             }
             else if(sibCount > 0 && sibCount <4)
             {
-                Console.WriteLine("\nSounds like a cozy family.");
+                Console.WriteLine("Sounds like a cozy family.");
             }
-            else if(sibCount < 0)
+            else if (sibCount >= 4)
             {
-                Console.WriteLine("\nBy entering a negative number, do you mean that your parents sold your siblings to the gypsies? Perhaps I know your family!");
+                Console.WriteLine("Wow! What size wagon did your family need to get around?");
             }
+
             else
             {
-                Console.WriteLine("\nWow! What size wagon did your family need to get around?");
+                Console.WriteLine("By entering a negative number, do you mean that your parents sold your siblings to the gypsies? Perhaps I know your family!");
             }
-
+            
             //Conditionals:
 
-            //If the user’s age is an odd number, then they will retire in ____ years, or ___ years if their age is an even number.
+            //User will retire in certain number of years, based on if age is odd or even.
             int retireAge;
             if (userAge % 2 == 0)
             {
@@ -136,7 +133,7 @@ namespace Fortune_Teller
                 retireAge = 7;
             }
 
-            //Vacation home is based on number of sibling user entered.
+            //Vacation home is based on number of siblings user entered.
             string vacaHome;
             if(sibCount == 0)
             {
@@ -213,13 +210,13 @@ namespace Fortune_Teller
                 cashBank = 0;
             }
 
-            //The user’s fortune should be written as such:
-            //[First Name] [Last Name] will retire in [# of Years] with [Amount of Money] in the bank, a vacation home in [Location] and a [Mode of Transportation].
-            Console.WriteLine("\nI will now look into my crystal ball and see what your future holds...\n     ...\n          ...\n               ...");
+            // The fortune will incorporate the variables and conditionals in a final statement.
+            Console.WriteLine("\n\nI will now look into my crystal ball and see what your future holds...");
+            Console.WriteLine("\n     ...\n          ...\n               ...\n                    ...\n                         ...\n\n");
             Console.WriteLine(firstName + " " + lastName + " will retire in " + retireAge + " years, with $" + cashBank + " in the bank, a vacation home in " + vacaHome + ", and a " + modeTransportation + " with which to get around.");
-            Console.WriteLine("\nMadame Sybil has spoken. Have a wonderful life!");
+            Console.WriteLine("\nMadame Zeroni has spoken. Have a wonderful life!\nAnd don't hit your head on the tent flap on your way out.\n\n");
 
-
+            
 
 
 
